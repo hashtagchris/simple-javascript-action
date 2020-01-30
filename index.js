@@ -6,7 +6,7 @@ try {
   console.log(`process.argv0: ${process.argv0}`);
   console.log(`process.execArgv: ${process.execArgv}`);
   console.log(`process.execPath: ${process.execPath}`);
-  console.log(`process.env: ${process.env}`);
+  console.log(`process.env: ${JSON.stringify(process.env)}`);
   
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
