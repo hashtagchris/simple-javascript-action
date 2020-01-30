@@ -2,6 +2,11 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
+  console.log(`process.argv: ${process.argv}`);
+  console.log(`process.argv0: ${process.argv0}`);
+  console.log(`process.execArgv: ${process.execArgv}`);
+  console.log(`process.execPath: ${process.execPath}`);
+  
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
